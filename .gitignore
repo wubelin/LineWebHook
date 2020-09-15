@@ -1,3 +1,5 @@
 /.vs
 /main/bin
 /main/obj
+/LineWebHook/obj
+/LineWebHook/bin
