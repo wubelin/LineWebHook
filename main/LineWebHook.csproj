@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <RootNamespace>Bot</RootNamespace>
+    <AssemblyName>LineWebHook</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Connected Services\ServiceReference1\**" />
+    <Content Remove="Connected Services\ServiceReference1\**" />
+    <EmbeddedResource Remove="Connected Services\ServiceReference1\**" />
+    <None Remove="Connected Services\ServiceReference1\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Link.cs" />
+    <Compile Remove="NEnergyLink.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LineBotSDK" Version="2.2.26" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Connected Services\" />
+  </ItemGroup>
+
+</Project>
